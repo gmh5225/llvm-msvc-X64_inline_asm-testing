@@ -14,7 +14,7 @@ __declspec(naked) void test_2()
 {
     // error : 'naked' attribute is not supported on 'x86_64'
     // ->>>>>>>>>>>>>>>>>>>>>>>
-    // 20220528 support in llvm-msvc
+    // 20220528 support in llvm-msvc-v1.5
     _asm
     {
         mov rax,1
