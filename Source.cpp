@@ -10,9 +10,20 @@ test_1()
     }
 }
 
+__declspec(naked) void test_2()
+{
+    // error : 'naked' attribute is not supported on 'x86_64'
+    _asm
+    {
+        mov rax,1
+        ret
+    }
+}
+
 int
 main()
 {
     test_1();
+    test_2();
     return 0;
 }
